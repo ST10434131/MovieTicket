@@ -26,7 +26,7 @@ public class MovieTicket
         Scanner input = new Scanner(System.in);
         System.out.println("Enter age");
         Age = input.nextInt();
-        System.out.println("Enter day of week using numbers 1-7 (1 = Monday , 7 = Sunday etc");
+        System.out.println("Enter day of week using numbers 1-7 (1 = Monday , 7 = Sunday etc)");
         Day = input.nextInt();
         
     }
@@ -36,39 +36,104 @@ public class MovieTicket
         switch(Day)
         {
            case 1:
-           {
-                Weekday = true;
-                if (Weekday == true)
-                        {
-                            if (Age <= 12)
-                            {
-                                if (Age >= 65)
-                                {
-                                    
-                                }
-                            }
-                            
-                        }
-                                   
+           {            
+            if ((Age <= 12) || (Age >= 65))
+            {
+             Price = 5;
+             break;
+            }
+            else
+            {
+             Price = 10;
+             break;
+            }
+                        
            }
            case 2:
-               Weekday = true;
+            if ((Age <= 12) || (Age >= 65))
+            {
+             Price = 5;
+             break;
+            }
+            else
+            {
+             Price = 10;
+             break;
+            }
            case 3:
-               Weekday = true;
+            if ((Age <= 12) || (Age >= 65))
+            {
+             Price = 5;
+             break;
+            }
+            else
+            {
+             Price = 10;
+             break;
+            }
            case 4:
-               Weekday = true;
+            if ((Age <= 12) || (Age >= 65))
+            {
+             Price = 5; 
+             break;
+            }
+            else
+            {
+             Price = 10;
+             break;
+            }
            case 5:
-               Weekday = true;
+            if ((Age <= 12) || (Age >= 65))
+            {
+             Price = 5;
+             break;
+            }
+            else
+            {
+             Price = 10;
+             break;
+            }
            case 6:
-               Weekday = false;
+            if ((Age <= 12) || (Age >= 65))
+            {
+             Price = 10;
+             break;
+            }
+            else
+            {
+             Price = 15;
+             break;
+            }
            case 7:
-               Weekday = false;      
-        }
-        
+            if ((Age <= 12) || (Age >= 65))
+            {
+             Price = 10;
+             break;
+            }
+            else
+            {
+             Price = 15;
+             break;
+            }
+            default:
+            {
+              Price = 15;  
+            }
+            
+        }   
+    }
+    
+    public static void display()
+    {
+        System.out.println("Price: $" + Price);
     }
     
     public static void main(String[] args)
     {
+        getInput();
+        calculateCost();
+        display();
+        
         
         
     }
